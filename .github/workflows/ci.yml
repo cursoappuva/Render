@@ -126,7 +126,7 @@ jobs:
       
       # 2. Esperar un poco para que Render procese
       - name: Wait for deploy
-	run: |
+        run: |
           echo "⏳ Waiting for Render to deploy..."
           sleep 30
       
