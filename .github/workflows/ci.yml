@@ -125,4 +125,15 @@ jobs:
           echo "🚀 Deploy triggered on Render"
       
       # 2. Esperar un poco para que Render procese
-      - name: Wait for
+      - name: Wait for deploy
+	run: |
+          echo "⏳ Waiting for Render to deploy..."
+          sleep 30
+      
+      # 3. Resumen final
+      - name: Deployment summary
+        run: |
+          echo "✅ Deployment triggered successfully!"
+          echo "📦 Version: ${{ github.sha }}"
+          echo "🔗 Check your Render dashboard for deploy status"
+          echo "🌐 Your app will be live at your Render URL in ~2-3 minutes"
